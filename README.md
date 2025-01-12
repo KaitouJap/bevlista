@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# Shopping List Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is a **Shopping List Application** built using **React** and **Vite** with **TypeScript**. The app allows users to manage a shopping list by performing CRUD operations: adding, deleting, and updating items. It leverages the **Fetch API** for data handling and is styled using **Bootstrap** for a responsive and modern UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Add Items**: Add new items to your shopping list.
+- **Delete Items**: Remove items from the list with ease.
+- **Update Items**: Edit item details directly in the list.
+- **Responsive Design**: Fully responsive and mobile-friendly interface using Bootstrap.
+- **Fast Performance**: Built with Vite for a lightweight and blazing-fast development experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: JavaScript library for building user interfaces.
+- **Vite**: Next-generation frontend tooling for faster builds.
+- **TypeScript**: Type-safe development experience.
+- **Bootstrap**: CSS framework for responsive and stylish design.
+- **Fetch API**: Used for asynchronous data handling.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Prerequisites
+Ensure you have the following installed:
+- Node.js (>=16.x)
+- npm
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/KaitouJap/bevlista.git
+   cd bevlista
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open the app in your browser:
+   ```
+   http://localhost:5173
+   ```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
