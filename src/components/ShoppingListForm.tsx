@@ -20,6 +20,8 @@ const ShoppingListForm: FC<ShoppingListFormProps> = ({ editData, setEditData, po
               Product_Name: editData.Product_Name,
               unit_of_measurement: editData.unit_of_measurement,
             });
+        }else{
+            postData();
         }
     }
 
@@ -70,7 +72,7 @@ const ShoppingListForm: FC<ShoppingListFormProps> = ({ editData, setEditData, po
                             <button type="submit" className="btn btn-success me-2">Save</button>
                             <button type="button" className="btn btn-secondary" onClick={() => setEditData(null)}>Cancel</button>
                         </div> : 
-                        <button type="button" className="btn btn-primary" onClick={postData}>Add</button>
+                        <button type="submit" className="btn btn-primary">Add</button>
                     }
                 </div>
             </form>
