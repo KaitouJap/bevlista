@@ -29,7 +29,10 @@ function App() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(updatedItem)
+        body: JSON.stringify({
+          ...updatedItem,
+          Quantity: Number(updatedItem.Quantity)
+        })
       });
       if(!response.ok) throw new Error('Could not update data!');
 
@@ -48,7 +51,7 @@ const postData = async () => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          Quantity: editData!.Quantity,
+          Quantity: Number(editData!.Quantity),
           Product_Name: editData!.Product_Name,
           unit_of_measurement: editData!.unit_of_measurement
         })
